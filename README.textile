@@ -1,0 +1,9 @@
+h1. first whack at a Ruby API for interacting with "Pachube":http://www.pachube.com
+
+h2. work in progress at this point
+
+h2. wants
+
+To be able to use the XSD::Mapping caps in Ruby to interact with an Eeml class produced by the xsd2ruby tool.  Will make the code gen process part of the rake build.
+
+Currently, I'm included the xsd2ruby.rb generated Eeml class.  There is a rake task for the generation operation, but because Rake requires 'pachube' already, which requires 'eeml'
