@@ -4,13 +4,8 @@ require 'rake/rdoctask'
 require 'rake/packagetask'
 require 'rake/gempackagetask'
 
-desc 'Generate Eeml class from XSD.'
-task :gen do
-  `xsd2ruby.rb --xsd resources/005.xsd --classdef lib/eeml`
-end
-
 $:.unshift(File.dirname(__FILE__) + "/lib")
-require 'pachube'
+require 'pachuber'
 
 PKG_NAME      = 'pachuber'
 PKG_VERSION   = Pachube::VERSION
@@ -21,7 +16,7 @@ task :default => :test
 
 desc "Clean generated files"
 task :clean do
-  rm FileList['test/output']
+  #rm FileList['test/']
   rm_rf 'pkg'
   rm_rf 'rdoc'
 end
@@ -59,7 +54,7 @@ spec = Gem::Specification.new do |s|
   s.has_rdoc = true
   s.requirements << 'none'
   s.require_path = 'lib'
-  s.autorequire = 'pachuber'
+  #s.autorequire = 'pachuber'
   s.add_dependency("httparty", ">= 0.4.5")
   s.files = [ "Rakefile", "README.textile", "MIT-LICENSE" ]
   s.files = s.files + Dir.glob( "lib/**/*" ).delete_if { |item| item.include?( "\.svn" ) }
