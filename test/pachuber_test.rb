@@ -21,16 +21,15 @@ class PachubeTest < Test::Unit::TestCase
     eeml = pach.get_eeml("/504.xml")  
     assert eeml
     assert_equal "EEML::Environment", eeml.class.name
-    #assert_equal "Pachube Office environment", eeml.title.to_s
     assert_equal "office", eeml.location.name
   end
 
-  def test_pachube_post
+  def test_pachube_update_post
     env = EEML::Environment.new
     env << EEML::Data.new(42, :id => "ABC123")
-    
     pach = Pachube.new(pachube_api_key)
     resp = pach.update("/4078.xml", env.to_eeml)
     assert_equal 200, resp.code
   end
+  
 end

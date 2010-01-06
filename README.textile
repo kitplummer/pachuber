@@ -1,9 +1,11 @@
-h1. first whack at a Ruby API for interacting with "Pachube":http://www.pachube.com
+h1. First whack at a Ruby API for interacting with "Pachube":http://www.pachube.com
 
-h2. work in progress at this point
+h2. Work in progress at this point
 
-h2. wants
+Requires my fork of the eeml-simple EEML wrapper library.  I'm trying to get my changes merged in upstream, so we'll be able to use the original Gemcutter gem.
 
-To be able to use the XSD::Mapping caps in Ruby to interact with an Eeml class produced by the xsd2ruby tool.  Will make the code gen process part of the rake build.
+Take a peek at the test cases for examples of how to consume/contribute to Pachube in either EEML XML or EEML objects.
 
-Currently, I'm included the xsd2ruby.rb generated Eeml class.  There is a rake task for the generation operation, but because Rake requires 'pachube' already, which requires 'eeml'
+h2. Wants
+
+To support the whole API.  Right I don't need it.  So...if you're interested fork away or let me know how I can help.

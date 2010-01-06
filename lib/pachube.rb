@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'httparty'
-require 'xsd/mapping'
 require 'eeml'
 
 class Pachube
