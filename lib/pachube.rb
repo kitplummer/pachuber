@@ -20,9 +20,14 @@ class Pachube
   end
   
   def get_eeml(feed_url)
-    Eeml.new
     xml = self.get_xml(feed_url)
-    XSD::Mapping.xml2obj(xml.to_s)
+    eeml = EEML::Environment.from_eeml(xml)
   end
   
+  def update(feed_url, eeml)
+    options = { :headers => {"X-PachubeApiKey" => @key},
+                :body => eeml 
+              }
+    self.class.put(feed_url, options)
+  end
 end
