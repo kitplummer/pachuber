@@ -2,7 +2,7 @@ require 'rubygems'
 require 'test/unit'
 require 'nokogiri'
 
-require File.join(File.dirname(__FILE__), '../lib/pachube.rb')
+require File.join(File.dirname(__FILE__), '../lib/pachuber.rb')
 # The pachube_api_key needs to be your Pachube API key.
 # I happen to store mine in a key.rb file in resources/.
 require File.join(File.dirname(__FILE__), '../resources/key.rb')
