@@ -56,6 +56,7 @@ spec = Gem::Specification.new do |s|
   s.require_path = 'lib'
   #s.autorequire = 'pachuber'
   s.add_dependency("httparty", ">= 0.4.5")
+  s.add_dependency("eeml-simple", ">= 0.2.0")
   s.files = [ "Rakefile", "README.textile", "MIT-LICENSE" ]
   s.files = s.files + Dir.glob( "lib/**/*" ).delete_if { |item| item.include?( "\.svn" ) }
   s.files = s.files + Dir.glob( "resources/**/*" ).delete_if { |item| item.include?( "\.svn" ) }
