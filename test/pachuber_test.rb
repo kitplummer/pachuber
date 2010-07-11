@@ -9,7 +9,7 @@ require File.join(File.dirname(__FILE__), '../resources/key.rb')
 class PachubeTest < Test::Unit::TestCase
 
   def test_pachube_get_xml
-    pach = Pachube.new(pachube_api_key)
+    pach = Pachube.new(KEY)
     xml = pach.get_xml("/504.xml")
     assert xml
     assert_equal "Pachube Office environment",
@@ -17,7 +17,7 @@ class PachubeTest < Test::Unit::TestCase
   end
 
   def test_pachube_get_eeml
-    pach = Pachube.new(pachube_api_key)
+    pach = Pachube.new(KEY)
     eeml = pach.get_eeml("/504.xml")  
     assert eeml
     assert_equal "EEML::Environment", eeml.class.name
@@ -27,7 +27,7 @@ class PachubeTest < Test::Unit::TestCase
   def test_pachube_update_post
     env = EEML::Environment.new
     env << EEML::Data.new(42, :id => "ABC123")
-    pach = Pachube.new(pachube_api_key)
+    pach = Pachube.new(KEY)
     resp = pach.update("/4078.xml", env.to_eeml)
     assert_equal 200, resp.code
   end

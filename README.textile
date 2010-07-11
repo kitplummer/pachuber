@@ -2,7 +2,7 @@ h1. First whack at a Ruby API for interacting with "Pachube":http://www.pachube.
 
 h2. Work in progress at this point
 
-Requires version 0.2.0 or greater of the eeml-simple EEML wrapper library.  Thanks to James Smith for including my changes upstream.
+Requires version 0.2.0 or greater of the eeml-simple EEML wrapper library (not the eeml gem).  Thanks to James Smith for including my changes upstream.
 
 Take a peek at the test cases for examples of how to consume/contribute to Pachube in either EEML XML or EEML objects.
 
