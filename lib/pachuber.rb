@@ -2,8 +2,9 @@ require 'rubygems'
 require 'httparty'
 require 'eeml'
 
+require 'pachuber/version'
+
 class Pachube
-  VERSION = '0.1.1'
   class PachubeError < RuntimeError; end
   
   # Using HTTParty to hide the REST/HTTP interface

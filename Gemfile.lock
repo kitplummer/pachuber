@@ -1,0 +1,28 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (2.1.2)
+    crack (0.1.8)
+    diff-lcs (1.1.2)
+    eeml-simple (0.2.0)
+      builder (>= 2.1.2)
+    httparty (0.6.1)
+      crack (= 0.1.8)
+    nokogiri (1.4.3.1)
+    rspec (2.0.0.beta.20)
+      rspec-core (= 2.0.0.beta.20)
+      rspec-expectations (= 2.0.0.beta.20)
+      rspec-mocks (= 2.0.0.beta.20)
+    rspec-core (2.0.0.beta.20)
+    rspec-expectations (2.0.0.beta.20)
+      diff-lcs (>= 1.1.2)
+    rspec-mocks (2.0.0.beta.20)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  eeml-simple (>= 0.2.0)
+  httparty (>= 0.4.5)
+  nokogiri
+  rspec
