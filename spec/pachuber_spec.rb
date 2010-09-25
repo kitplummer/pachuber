@@ -26,6 +26,7 @@ describe Pachube do
     env = EEML::Environment.new
     env << EEML::Data.new(42, :id => "ABC123")
     pach = Pachube.new(KEY)
+	p env.to_eeml
     resp = pach.update("/4078.xml", env.to_eeml)
     resp.code.should == 200
   end

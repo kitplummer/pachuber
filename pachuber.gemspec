@@ -19,13 +19,11 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [ "README.textile" ]
   s.rdoc_options     = ["--charset=UTF-8"]
   s.require_path     = "lib"
-
+  s.files = ["Rakefile", "pachuber.gemspec", "Gemfile", "README.textile"] +
+  Dir.glob("lib/**/*")
   s.post_install_message = %Q{**************************************************
-
   Thank you for installing #{s.summary}
-
   Copyright 2010 - Dozer Software LLC.
-
 **************************************************
 }
 
