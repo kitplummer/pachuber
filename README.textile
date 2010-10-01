@@ -32,6 +32,6 @@ data.tags << "temperature"
 data.unit = EEML::Unit.new("Celsius", :symbol => 'C', :type => :derivedSI)
 env << data
 
-pach = Pachube.new("94d8147f1af2cf0bfa4d533f1dca1da367fd245910126985aef2e31b9f0bf482")
+pach = Pachube.new(PACHUBE_KEY)
 resp = pach.update("/4078.xml", env.to_eeml).code.to_s
 puts "RESPONSE CODE: #{resp}"</code></pre>
