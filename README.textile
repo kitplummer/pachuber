@@ -9,3 +9,29 @@ Take a peek at the test cases for examples of how to consume/contribute to Pachu
 h2. Wants
 
 To support the whole API, I don't need it all yet.  So...if you're interested fork away or let me know how I can help.
+
+h2. Using
+
+<pre><code>require 'rubygems'
+require 'pachuber'
+require 'gotempr'
+require 'position'
+
+pos = Position.new
+
+tmp = GoTempR::Fetcher.new("/dev/ldusb0").celcius
+
+env = EEML::Environment.new
+env.location = EEML::Location.new(:physical, :disposition => :mobile,   
+  :exposure => :outdoor,
+  :lat => pos.lat.to_f, :lon => pos.lng.to_f,
+  :name => "Temp where Kit is")
+
+data = EEML::Data.new(tmp)
+data.tags << "temperature"
+data.unit = EEML::Unit.new("Celsius", :symbol => 'C', :type => :derivedSI)
+env << data
+
+pach = Pachube.new("94d8147f1af2cf0bfa4d533f1dca1da367fd245910126985aef2e31b9f0bf482")
+resp = pach.update("/4078.xml", env.to_eeml).code.to_s
+puts "RESPONSE CODE: #{resp}"</code></pre>
