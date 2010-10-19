@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.email       = "kitplummer@dozersoftware.com"
   s.homepage    = "http://github.com/kitplummer/pachuber"
   s.summary     = "pachuber-#{Pachuber::VERSION}"
-  s.description = "%q{Just a simple Ruby library to provides Ruby-style abstraction around the HTTP API at Pachube.}"
+  s.description = "Just a simple Ruby library to provides Ruby-style abstraction around the HTTP API at Pachube."
 
   s.rubygems_version   = "1.3.7"
 
