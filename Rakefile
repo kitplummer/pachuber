@@ -7,7 +7,7 @@ Bundler.setup
 Bundler::GemHelper.install_tasks
 
 desc 'Default: run unit tests.'
-task :default => :test
+task :default => :spec
 
 desc "Clean generated files"
 task :clean do

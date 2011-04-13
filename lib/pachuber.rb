@@ -11,7 +11,7 @@ class Pachube
   include HTTParty
   
   # The Pachube API.  Sure hope they don't change the URL.
-  base_uri 'http://www.pachube.com/api'
+  base_uri 'http://www.pachube.com/v1/'
   
   def initialize(key)
     @key = key
